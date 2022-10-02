@@ -26,7 +26,11 @@ const generatePassword = function () {
   do {
     var isInvalid = false;
     var passwordLength = prompt("How many characters for your password?");
-    // TODO: Input validation
+    // Input validation
+    if (isNaN(passwordLength) || passwordLength < 8 || passwordLength > 128) {
+      alert("Input must be a number between 8 and 128. Please try again.")
+      isInvalid = true;
+    }
   } while (isInvalid);
 
   // Lowercase characters?
