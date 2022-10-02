@@ -19,5 +19,38 @@ const charLower = "abcdefghijklmnopqrstuvwxyz",
   charSpecial = " !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
 
 const generatePassword = function () {
-  
+  // All of the characters the user has selected
+  var charAll = "";
+
+  // Password length?
+  do {
+    var isInvalid = false;
+    var passwordLength = prompt("How many characters for your password?");
+    // TODO: Input validation
+  } while (isInvalid);
+
+  // Lowercase characters?
+  if (confirm("Do you want lowercase characters?")) {
+    charAll = charAll + charLower;
+  }
+
+  // Uppercase characters?
+  if (confirm("Do you want uppercase characters?")) {
+    charAll = charAll + charUpper;
+  }
+
+  // Numeric characters?
+  if (confirm("Do you want numeric characters?")) {
+    charAll = charAll + charNumeric;
+  }
+
+  // Special characters?
+  if (confirm("Do you want special characters?")) {
+    charAll = charAll + charSpecial;
+  }
+
+  // Debug
+  console.log(charAll);
+
+
 }
