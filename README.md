@@ -2,7 +2,7 @@
 
 ## A simple website for generating random passwords
 
-Access the live site [here](luckysal.github.io/homework-3)
+Access the live site [here](https://luckysal.github.io/homework-3)
 
 ![homepage](./screenshots/homepage.png)
 
