@@ -52,5 +52,10 @@ const generatePassword = function () {
   // Debug
   console.log(charAll);
 
-
+  // Generate the new random password
+  var newPassword = "";
+  for (var i = 0; i < passwordLength; i++) {
+    newPassword = newPassword + charAll.charAt(Math.floor(Math.random() * charAll.length));
+  }
+  return newPassword;
 }
