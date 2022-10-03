@@ -32,26 +32,36 @@ const generatePassword = function () {
       isInvalid = true;
     }
   } while (isInvalid);
+  do {
+    isInvalid = true;
+    // Lowercase characters?
+    if (confirm("Do you want lowercase characters?")) {
+      charAll = charAll + charLower;
+      isInvalid = false;
+    }
 
-  // Lowercase characters?
-  if (confirm("Do you want lowercase characters?")) {
-    charAll = charAll + charLower;
-  }
+    // Uppercase characters?
+    if (confirm("Do you want uppercase characters?")) {
+      charAll = charAll + charUpper;
+      isInvalid = false;
+    }
 
-  // Uppercase characters?
-  if (confirm("Do you want uppercase characters?")) {
-    charAll = charAll + charUpper;
-  }
+    // Numeric characters?
+    if (confirm("Do you want numeric characters?")) {
+      charAll = charAll + charNumeric;
+      isInvalid = false;
+    }
 
-  // Numeric characters?
-  if (confirm("Do you want numeric characters?")) {
-    charAll = charAll + charNumeric;
-  }
-
-  // Special characters?
-  if (confirm("Do you want special characters?")) {
-    charAll = charAll + charSpecial;
-  }
+    // Special characters?
+    if (confirm("Do you want special characters?")) {
+      charAll = charAll + charSpecial;
+      isInvalid = false;
+    }
+    if (isInvalid) {
+      alert("You must choose at least one character type. Please try again.");
+      charAll = "";
+    }
+  } while (isInvalid);
 
   // Debug
   console.log(charAll);
